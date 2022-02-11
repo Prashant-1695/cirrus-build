@@ -40,7 +40,7 @@ tg(){
 	curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" --data "text=$msg&chat_id=${your_telegram_id}"
 }
 
-id=1332752551
+id=-1001659048493
 
 # compile plox
 make bacon -j10 &
