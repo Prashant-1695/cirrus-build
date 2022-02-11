@@ -8,7 +8,7 @@ task:
     timeout_in: 260m
     container:
       image: aarunalr/aosp-build
-      cpu: 8
+      cpu: 44
       memory: 32G
     download_ccache_background_script: # To download ccache in background
       - bash download_ccache # Ccache download script
