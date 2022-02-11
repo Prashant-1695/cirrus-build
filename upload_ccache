@@ -1,11 +1,14 @@
 #!/bin/bash
 
-cd /tmp/ccache
+cd /tmp/ccache_backup
+
+echo "|| Compressing CCACHE ||"
+7za a -tzip -v25m ccache_backup.zip /tmp/ccache/* -sdel
 
 echo "|| Uploading CCACHE ||"
-git add -f -A .
-git commit -a -sm "CCACHE: IMPORT CCACHE FROM NEW BUILD"
+git add .
+git commit -sm "CCACHE: IMPORT CCACHE FROM NEW BUILD"
 git push -f
 
 # clean storage
-rm -rf /tmp/rom
+rm -rf /tmp/*

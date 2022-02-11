@@ -6,9 +6,16 @@ nproc
 cat /etc/os*
 env
 
-apt install git
+apt install git p7zip
 
-cd /tmp # Where to download cccahe https://github.com/ImPrashantt/ccache_backup
+cd /tmp # Where to download cccahe
 
 echo "|| Downloading CCACHE ||"
-git clone --depth=1 https://who-em-i:$gh_token@github.com/ImPrashantt/ccache_backup.git ccache
+git clone -b pex --depth=1 https://who-em-i:$gh_token@github.com/ImPrashantt/ccache_backup.git ccache_backup
+
+# move zips to outside of backup_repo dir
+mv ccache_backup/ccache_backup.zip.* ./
+
+# extract them inside /tmp/ccache
+echo "|| Extracting CCACHE ||"
+7za x ccache_backup.zip.001 -occache
