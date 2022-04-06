@@ -4,14 +4,14 @@ mkdir -p /tmp/rom # Where to sync source
 cd /tmp/rom
 
 ##some of my work
-git config --global user.name "ImPrashantt"
-git config --global user.email "prashant33968@gmail.com"
+git config --global user.name "yograjfire18"
+git config --global user.email "yograjfire18@gmail.com"
 
 # Repo init command, that -device,-mips,-darwin,-notdefault part will save you more time and storage to sync, add more according to your rom and choice. Optimization is welcomed! Let's make it quit, and with depth=1 so that no unnecessary things.
-repo init -q --no-repo-verify --depth=1 -u https://github.com/NusantaraProject-ROM/android_manifest -b 12 -g default,-mips,-darwin,-notdefault
+repo init -q --no-repo-verify --depth=1 -u https://github.com/PixelExperience/manifest -b twelve -g default,-mips,-darwin,-notdefault
 
 # Local manifest
-git clone https://github.com/wHo-EM-i/manifest.git --depth 1 -b nusantara_4.19 .repo/local_manifests
+git clone https://github.com/yograjfire18/local_manifest.git --depth 1 -b pissel-12 .repo/local_manifests
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8

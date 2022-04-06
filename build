@@ -3,7 +3,7 @@ cd /tmp/rom
 
 # Normal build steps
 . build/envsetup.sh
-lunch nad_lavender-userdebug
+lunch aosp_Z01R-user
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -24,7 +24,7 @@ ccache -z
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 up(){
-	curl --upload-file $1 http://oshi.at/nossl
+	curl -T $1 temp.sh
 	# 3 days, 5 GB limit
 }
 
@@ -43,14 +43,14 @@ tg(){
 id=-1001659048493
 
 # compile plox
-make nad -j10 &
+mke bacon -j8 &
 sleep 85m
 kill %1
 
 
 # Upload rom zip file if succeed to build! Send notification to tg! And send shell to tg if build fails!
-if [ -e out/target/product/lavender/Nusantara*.zip ]; then
-send_zip=$(up out/target/product/lavender/Nusantara*.zip) && tg $id "Build Succeed!
+if [ -e out/target/product/Z01R/PixelExperience*.zip ]; then
+send_zip=$(up out/target/product/Z01R/PixelExperience*.zip) && tg $id "Build Succeed!
 $send_zip"
 fi
 ccache -s # Let's print ccache statistics finally
