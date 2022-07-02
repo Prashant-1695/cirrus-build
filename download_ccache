@@ -24,9 +24,9 @@ echo "|| Downloading CCACHE ||"
 SECONDS=0
 #gh release download ${rom}_ccache -p "*zip.0*" --repo https://github.com/Prashant-1695/cirrus-build
 
-time wget https://polished-disk-a3d6.shubhamxd.workers.dev/0:/los-fork_ccache_backup.zip.001
-time wget https://polished-disk-a3d6.shubhamxd.workers.dev/0:/los-fork_ccache_backup.zip.002
-time wget https://polished-disk-a3d6.shubhamxd.workers.dev/0:/los-fork_ccache_backup.zip.003
+#time wget https://polished-disk-a3d6.shubhamxd.workers.dev/0:/los-fork_ccache_backup.zip.001
+#time wget https://polished-disk-a3d6.shubhamxd.workers.dev/0:/los-fork_ccache_backup.zip.002
+#time wget https://polished-disk-a3d6.shubhamxd.workers.dev/0:/los-fork_ccache_backup.zip.003
 tg "Successfully Downloaded CCACHE! Time Took: $(($SECONDS / 60))min and $(($SECONDS % 60))sec "
 
 

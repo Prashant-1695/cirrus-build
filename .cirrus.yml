@@ -18,6 +18,6 @@ task:
     sync_script:
       - bash sync
     build_script:
-      - bash build full gh
+      - bash build system gh
     upload_ccache_script: # Upload ccache to cloud foreground
       - bash upload_ccache gh # Ccache uploading script
