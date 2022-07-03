@@ -22,7 +22,7 @@ repo init --depth=1 --no-repo-verify -u https://github.com/ShapeShiftOS/android_
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 
 # Clone local manifest! So that no need to manually git clone repos or change hals, you can use normal git clone or rm and re clone, they will cost little more time, and you may get timeout! Let's make it quit and depth=1 too.
-git clone --depth=1 -b 11 https://Prashant-1695:$ghtoken@github.com/Prashant-1695/android_device_xiaomi_lavender device/xiaomi/lavender
+git clone --depth=1 -b 11 https://Prashant-1695:$gh_token@github.com/Prashant-1695/android_device_xiaomi_lavender device/xiaomi/lavender
 git clone --depth=1 -b 11 https://github.com/Prashant-1695/android_vendor_xiaomi_lavender vendor/xiaomi/lavender
 git clone --depth=1 -b a12 https://github.com/projects-nexus/android_kernel_xiaomi_lavender-LTO kernel/xiaomi/lavender
 
