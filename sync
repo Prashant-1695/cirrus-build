@@ -25,5 +25,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 git clone --depth=1 -b 11 https://Prashant-1695:$gh_token@github.com/Prashant-1695/android_device_xiaomi_lavender device/xiaomi/lavender
 git clone --depth=1 -b 11 https://github.com/Prashant-1695/android_vendor_xiaomi_lavender vendor/xiaomi/lavender
 git clone --depth=1 -b a12 https://github.com/projects-nexus/android_kernel_xiaomi_lavender-LTO kernel/xiaomi/lavender
+git clone -b arrow-11.0-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
+git clone -b arrow-11.0-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
+git clone -b arrow-11.0-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
 
 tg "Cloned all Sources Successfully! Time Took: $(($SECONDS / 60))min and $(($SECONDS % 60))sec "
