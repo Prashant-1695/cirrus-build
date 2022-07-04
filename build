@@ -4,7 +4,7 @@ cd /tmp/rom
 # Normal build steps
 . build/envsetup.sh
 export SELINUX_IGNORE_NEVERALLOWS=true
-lunch ssos_lavender-userdebug
+lunch p404_lavender-userdebug
 export _JAVA_OPTIONS="-Xmx10g"
 if [ -d "/tmp/ci" ]; then
 export CCACHE_DIR=/tmp/ccache
